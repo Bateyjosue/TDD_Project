@@ -1,20 +1,24 @@
-#class Solver
+# class Solver
 class Solver
-	def factorial(n)
-		raise ArgumentError, 'Only positive integers are allowed' unless n >= 0
-		(1..n).inject(:*) || 1
-	end
+  def factorial(num)
+    raise ArgumentError, 'Only positive integers are allowed' unless num >= 0
 
-	def reverse(word)
-		word.reverse
-	end
+    (1..num).inject(:*) || 1
+  end
 
-	def fizzbuzz(n)
-		case
-		when n % 15 == 0 then 'FizzBuzz'
-		when n % 3 == 0 then 'Fizz'
-		when n % 5 == 0 then 'Buzz'
-		else n.to_s
-		end
-	end
+  def reverse(word)
+    word.reverse
+  end
+
+  def fizzbuzz(num)
+    if num % 15 == 0
+      'FizzBuzz'
+    elsif num % 3 == 0
+      'Fizz'
+    elsif num % 5 == 0
+      'Buzz'
+    else
+      num.to_s
+    end
+  end
 end
