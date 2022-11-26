@@ -16,6 +16,13 @@ describe Solver do
   end
 
   context "Reverse of a string Tester" do
+    it "Should reverse the string hello to olleh" do
+      expect(@solver.reverse("hello")).to eql("olleh")
+    end
+
+    it "Should reverse the string race to ecar" do
+      expect(@solver.reverse("race")).to eql("ecar")
+    end
   end
 
   context "fizzbuzz function Tester" do
